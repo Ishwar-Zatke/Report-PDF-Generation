@@ -1,0 +1,131 @@
+/* DynamicPDFReport.css */
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.report-card {
+  /* border: 1px solid #e0e0e0; */
+  padding: 80px;
+  /* background-color: #ffffff; */
+  margin: 0;
+}
+
+.page {
+  page-break-before: always;
+  padding: 200px 0 20px 0;  /* Increase top padding */
+  position: relative;
+}
+
+.report-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.header-logo {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.page-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+
+/* Tables */
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background-color: #fff;
+}
+
+.summary-table th,
+.summary-table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px 10px; 
+  text-align: left;
+  vertical-align: middle;
+}
+
+.summary-table th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Set specific widths for each column to control the layout */
+.summary-table th:nth-child(1) { width: 250px; }  /* ID */
+.summary-table th:nth-child(2) { width: 80px; }   /* Contracts */
+.summary-table th:nth-child(3) { width: 80px; }   /* Lines */
+.summary-table th:nth-child(4) { width: 130px; }  /* Assembly Lines */
+.summary-table th:nth-child(5) { width: 150px; }  /* ERCs */
+.summary-table th:nth-child(6) { width: 220px; }  /* Findings */
+.summary-table th:nth-child(7) { width: 100px; }  /* Detectors */
+
+/* Adjustments for the Findings column */
+.summary-table td:nth-child(6) {
+  height: 150px; /* Increased height */
+  word-wrap: break-word;
+  white-space: normal;
+}
+.findings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.findings-table td {
+  padding: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Vulnerabilities Table */
+.vulnerabilities-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px;
+  background-color: #fff;
+}
+
+.vulnerabilities-table th,
+.vulnerabilities-table td {
+  border: 1px solid #d0d0d0;  /* Adjusted border color for better visibility */
+  padding: 15px 10px;
+  text-align: left;
+  vertical-align: top;  /* Align content to the top */
+}
+
+.vulnerabilities-table th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
+
+.vulnerabilities-table tr:hover {
+  background-color: #f0f0f0;  /* Add a hover effect for rows */
+}
+
+/* Buttons */
+.generate-button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.generate-button:hover {
+  background-color: #0056b3;
+}
